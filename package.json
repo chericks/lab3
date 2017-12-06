@@ -1,0 +1,22 @@
+{
+  "name": "lab3",
+  "version": "1.0.0",
+  "description": "lab3 exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chericks/lab3.git"
+  },
+  "keywords": [
+    "lab3"
+  ],
+  "author": "Christopher Erickson",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "vue": "^2.5.9"
+  }
+}

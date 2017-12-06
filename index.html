@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue tutorial</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<h1>Vue introduction by Christopher Erickson</h1>
+	<p>The following is my attempt to figure out vue.js for the first time. The following is utilizing the message to make the following text reactive.</p>
+	<h2>Go into the console and type app.message = "your text here" to change the text.</h2>
+  <div id="app">
+    {{ message }}
+  </div>
+  <h2>The following is using attributes that vue calls directives. In paticular it is using v-bind to make the title of the div reactive. When you see attributes with a v- in the front that means it is provided by vue. </h2>
+  <div id="bnd">
+  <span v-bind:title="message">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+<h2>Vue can also effect the structure of the document in addition to the text and attributes. enter hidz.seen = false to make the following text dissapear.</h2>
+<div id="hidz">
+  <span v-if="seen">Poof!!</span>
+</div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!'
+      }
+    })
+	var bnd = new Vue({
+  el: '#bnd',
+  data: {
+    message: 'You loaded this page on ' + new Date().toLocaleString()
+  }
+})
+var hidz = new Vue({
+  el: '#hidz',
+  data: {
+    seen: true
+  }
+})
+  </script>
+</body>
+</html>
